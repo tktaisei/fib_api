@@ -7,7 +7,7 @@ app = FastAPI(title="Fibonacci API")
 
 @app.get("/fib")
 def get_fibonacci(
-    n: int = Query(..., description="1 以上の整数")  # Pydantic バリデーション
+    n: int = Query(..., description="1 以上の整数")
 ):
     try:
         result = fibonacci(n)
